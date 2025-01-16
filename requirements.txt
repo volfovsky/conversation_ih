@@ -1,2 +1,2 @@
-streamlit==0.74.0
+streamlit>=0.74.0
 openai==0.28.0
