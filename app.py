@@ -109,7 +109,8 @@ def main():
         st.session_state["conversation_history"].append({"role": "assistant", "content": assistant_reply})
 
         # Re-render
-        st.experimental_rerun()
+        # st.experimental_rerun()
+        st.cache_data.clear()
 
     # Check how many times the user has spoken
     user_turns = sum(1 for x in st.session_state["conversation_history"] if x["role"] == "user")
